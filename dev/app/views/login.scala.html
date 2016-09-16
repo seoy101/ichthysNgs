@@ -1,0 +1,29 @@
+@* login Template File *@
+@(param: Any)
+<html>
+	<dl>
+		<input type="checkbox" name="aa" value="ch1" checked="checked">1
+		<input type="checkbox" name="aa" value="ch2">2
+	</dl>
+	<dl>
+	<form action="@routes.DatabaseController.loginUser()" method="post" >
+		<input type="hidden" name="uIndex"  value="0">
+		<div>
+			<label for="uId">Id</label>
+			<input type="text" name="uId" id="uId">
+		</div>
+		<div>
+			<label for="password">option1</label>
+			<input type="text" name="password" id="password">
+		</div>
+		<input type="hidden" name="email" id="email" >
+		<div class="buttons">
+			<button type="submit">login</button>
+		</div>
+		<button id="joinBtn">join</button>
+	</form>
+	<script>
+		var defaultEmail="aaa"
+		document.getElementById('email').value=defaultEmail;
+	</script>
+	</html>

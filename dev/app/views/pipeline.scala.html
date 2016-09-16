@@ -1,0 +1,63 @@
+@* constitute Template File *@
+@(param: Any)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step From Wizard - 11 - Validation example with jQuery Validation</title>
+	<script src="@routes.Assets.versioned("plugins/jquery-2.1.4.min.js")"></script>
+    <!-- bootstrap for better look example, but not necessary -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("plugins/bootstrap/css/bootstrap.min.css")" type="text/css" media="screen, projection">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Step Form Wizard plugin -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("step-form-wizard/css/step-form-wizard-all.css")" type="text/css" media="screen, projection">
+    <script src="@routes.Assets.versioned("step-form-wizard/js/step-form-wizard.js")"></script>
+    <!-- nicer scroll in steps -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("plugins/mcustom-scrollbar/jquery.mCustomScrollbar.min.css")">
+    <script src="@routes.Assets.versioned("plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js")"></script>
+    <!-- validation library http://jqueryvalidation.org/ -->
+    <script src="@routes.Assets.versioned("plugins/jquery-validation/jquery.validate.min.js")"></script>
+    <script src="@routes.Assets.versioned("step-form-wizard/js/create-pipeline.js")"></script>
+    <style>
+        pre {margin: 45px 0 60px;}
+        h1 {margin: 60px 0 60px 0;}
+        p {margin-bottom: 10px;}
+        .error {color: #c7254e;}        
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="site-index">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="wizard_example2" enctype='multipart/form-data' action="@routes.LaunchController.uploadCustom()" method="post">    
+                    <input type="hidden" name="sender" id="sender"/> 
+                   			<fieldset>
+                   				<legend>Pipeline-Consitute</legend>
+                         		<div class="checkbox">
+                     				<label >
+                        					<input type="checkbox" name="test" id="test" value="test" onclick="onClick('test');"> test
+                        				</label>
+                      			</div>
+                      			<div class="checkbox">
+                      				<label >
+                      					<input type="checkbox" name="test2" id="test2" value="test2" onclick="onClick('test2');"> 111
+                      				</label>
+                      			</div>
+                      			<div class="checkbox" >
+                      				<label>
+                         				<input type="checkbox" name="test3" id="test3" value="test3" onclick="onClick('test3');"> 222
+                        				</label>
+                      			</div>
+                      			<input class="sf-right sf-btn" id="addStep-button" value="COMMIT"/>
+                       	 </fieldset>                       	 
+							</form>						     		
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

@@ -1,0 +1,23 @@
+@* join Template File *@
+@(param: Any)
+<html>
+
+	<form action="@routes.DatabaseController.addUser()" method="post" >
+		<input type="hidden" name="uIndex"  value="0">
+		<div>
+			<label for="uId">Id</label>
+			<input type="text" name="uId" id="uId">
+		</div>
+		<div>
+			<label for="password">option1</label>
+			<input type="text" name="password" id="password">
+			<input type="text" name="email" id="email">
+		</div>
+		<div class="buttons">
+			<button type="submit">join</button>
+		</div>
+	
+	</form>
+	
+	</dl>
+	</html>

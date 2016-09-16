@@ -1,0 +1,61 @@
+@* config Template File *@
+@(param: Any)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step From Wizard - 11 - Validation example with jQuery Validation</title>
+	<script src="@routes.Assets.versioned("plugins/jquery-2.1.4.min.js")"></script>
+    <!-- bootstrap for better look example, but not necessary -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("plugins/bootstrap/css/bootstrap.min.css")" type="text/css" media="screen, projection">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Step Form Wizard plugin -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("step-form-wizard/css/step-form-wizard-all.css")" type="text/css" media="screen, projection">
+    <script src="@routes.Assets.versioned("step-form-wizard/js/step-form-wizard.js")"></script>
+    <!-- nicer scroll in steps -->
+    <link rel="stylesheet" href="@routes.Assets.versioned("plugins/mcustom-scrollbar/jquery.mCustomScrollbar.min.css")">
+    <script src="@routes.Assets.versioned("plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js")"></script>	
+    <!-- validation library http://jqueryvalidation.org/ -->
+    <script src="@routes.Assets.versioned("plugins/jquery-validation/jquery.validate.min.js")"></script>
+    <script src="@routes.Assets.versioned("step-form-wizard/js/modaless.js")"></script>
+    <style>
+        pre {margin: 45px 0 60px;}
+        h1 {margin: 60px 0 60px 0;}
+        p {margin-bottom: 10px;}
+        .error {color: #c7254e;}
+    </style>
+</head>
+<body>                      			
+<div class="container">
+    <div class="site-index">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Validation example with jQuery Validation</h1>
+                      	<fieldset>
+                      		<form name="form1">
+                      			<input type="hidden" id="conf" name="conf"/>                      	                      		
+                      			<div class="form-group">
+									<label for="job_name">MEM</label>
+										<input type="text" class="form-control" id="job_name" name="job_name" placeholder="job_name" required >
+									</div>
+                      			<div class="form-group">
+										<label for="cpu">CPU</label>
+											<input type="text" class="form-control" id="cpu" name="cpu" placeholder="cpu" required >
+									</div>
+									<div class="form-group">
+										<label for="mem">MEM</label>
+											<input type="text" class="form-control" id="mem" name="mem" placeholder="mem" required >
+									</div>
+									<input class="sf-right sf-btn btn btn-primary btn-lg" id="modaless-button"  onclick ="modaless();" value="NEXT">
+								</form>
+							</fieldset>						     		
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

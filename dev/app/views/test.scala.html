@@ -1,0 +1,51 @@
+@* test Template File *@
+@(param: Any)
+<fieldset id="test">
+<legend>Basic information</legend>
+	<div class="row" >
+		<div class="col-lg-6">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="file" name ="file" id="file">
+				<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="Enter email" required >
+			</div>
+		</div>
+		<div class="col-lg-6">
+       	<div class="form-group">
+           	<label for="exampleInputPassword1">Favorite number</label>
+              <select class="form-control" name="favorite" required>
+              	<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+              	</select>
+			</div>
+			<div class="form-group">
+				<label>Own animals</label>
+             	<div class="checkbox">
+					<label>
+						<input type="checkbox" name="animal[]" required> Goat
+					</label>
+				</div>
+             	<div class="checkbox">
+              	<label>
+                 		<input type="checkbox" name="animal[]" > Cow
+                 	</label>
+             	</div>
+              <div class="checkbox">
+              	<label>
+                  	<input type="checkbox" name="animal[]" > Rooster
+                 	</label>
+            	</div>
+              <div class="checkbox">
+              	<label>
+                  	<input type="checkbox" name="animal[]" > Crocodile
+                	</label>
+             	</div>
+       	</div>
+     	</div>
+   	</div>
+</fieldset>
